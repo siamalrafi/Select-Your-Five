@@ -5,12 +5,11 @@
 
 .header-section {
     height: 350px;
-    background-color: #cdc0c0;
+    background-color: #ffcaca;
     display: flex;
     align-items: center;
     color: #800080;
 }
-
 
 .btn-div {
     text-align: center;
@@ -28,4 +27,12 @@
 }
 li{
     list-style-type: none;
+}
+.contant{color: black;
+   border-radius: 20px;
+   background-color: #dddddd;
+}
+.table{
+   /* background-color: rgb(57, 49, 49); */
+   height: 210px;
 }

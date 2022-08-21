@@ -7,8 +7,8 @@ function setValue(playerArry) {
         console.log(playerName);
         const tr = document.createElement('tr');
         tr.innerHTML = `
-        <th>${i + 1}</th>
-        <td>${playerName}</td> `;
+        <th ">${i + 1}</th>
+        <td ">${playerName}</td> `;
         setPlayer.appendChild(tr);
     }
 }
