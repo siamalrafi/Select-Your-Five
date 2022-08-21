@@ -9,6 +9,20 @@
     display: flex;
     align-items: center;
     color: #800080;
+}
 
 
+.btn-div {
+    text-align: center;
+}
+
+.btn-class {
+    border-radius:8px;
+    color: white;
+    background-color: rgb(4, 48, 114);
+    padding: 5px 25px;
+}
+
+.btn-class:hover{
+    background-color: green;
 }
