@@ -23,10 +23,23 @@ function clickBtn(element) {
     playerArry.push(playerObj);
     let selectedPlayer = playerArry.length;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     if (selectedPlayer === 5) {
         alert('You done')
     }
-   else if (selectedPlayer >= 6) {
+    else if (selectedPlayer >= 6) {
         alert('Vaia This is extra')
     }
     setValue(playerArry);
