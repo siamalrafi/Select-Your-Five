@@ -32,7 +32,7 @@ function clickBtn(element) {
     return disabled;
 }
 
-// Hisab section
+// calculate section
 function inputValue(inputId) {
     let inputString = document.getElementById(inputId).value;
 
@@ -68,6 +68,5 @@ document.getElementById('total-calculate').addEventListener('click', function ()
 
         document.getElementById('total-Amount').innerText = totalAmount;
     }
-
 
 })
