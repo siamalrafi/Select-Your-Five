@@ -20,8 +20,36 @@ function clickBtn(element) {
     }
     playerArry.push(playerObj);
     let selectedPlayer = playerArry.length;
-    if (selectedPlayer >= 6) {
-        alert('You already select five player')
+
+    if (selectedPlayer === 5) {
+        alert('You done')
     }
     setValue(playerArry)
 }
+
+// Hisab section
+function inputValue(inputId) {
+    let inputString = document.getElementById(inputId).value;
+    let Amount = parseInt(inputString);
+
+    return Amount;
+}
+
+document.getElementById('calculate').addEventListener('click', function () {
+    const playerAmount = inputValue('per-player');
+    document.getElementById('expenses').innerText = playerAmount * 5;
+})
+
+document.getElementById('total-calculate').addEventListener('click', function () {
+    const perPlayerAtring = document.getElementById('expenses').innerText;
+
+    const perPlayerAmount = parseFloat(perPlayerAtring)
+    const managerAmount = inputValue('manager');
+    const coachAmount = inputValue('coach');
+
+    const totalAmount = managerAmount + coachAmount + perPlayerAmount;
+
+    document.getElementById('total-Amount').innerText = totalAmount;
+
+
+})
