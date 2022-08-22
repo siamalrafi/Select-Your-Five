@@ -13,7 +13,6 @@ function setValue(playerArry) {
     }
 }
 
-
 function clickBtn(element) {
     element.disabled = true;
     let player = (element.parentNode.parentNode.children[0].innerText);
@@ -23,24 +22,11 @@ function clickBtn(element) {
     playerArry.push(playerObj);
     let selectedPlayer = playerArry.length;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     if (selectedPlayer === 5) {
-        alert('You done')
+        alert('WOW! Brother,You have selected five top players. ')
     }
     else if (selectedPlayer >= 6) {
-        alert('Vaia This is extra')
+        alert('Sorry Brother, You already select five player. ')
     }
     setValue(playerArry);
     return disabled;
