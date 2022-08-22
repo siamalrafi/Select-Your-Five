@@ -13,7 +13,9 @@ function setValue(playerArry) {
     }
 }
 
+
 function clickBtn(element) {
+    element.disabled = true;
     let player = (element.parentNode.parentNode.children[0].innerText);
     const playerObj = {
         player: player,
@@ -24,32 +26,49 @@ function clickBtn(element) {
     if (selectedPlayer === 5) {
         alert('You done')
     }
-    setValue(playerArry)
+   else if (selectedPlayer >= 6) {
+        alert('Vaia This is extra')
+    }
+    setValue(playerArry);
+    return disabled;
 }
 
 // Hisab section
 function inputValue(inputId) {
     let inputString = document.getElementById(inputId).value;
+
     let Amount = parseInt(inputString);
 
     return Amount;
+
 }
 
 document.getElementById('calculate').addEventListener('click', function () {
+
     const playerAmount = inputValue('per-player');
+
     document.getElementById('expenses').innerText = playerAmount * 5;
+
+    if (document.getElementById('per-player').value == '') {
+        alert('please enter you Amount')
+    }
 })
 
 document.getElementById('total-calculate').addEventListener('click', function () {
-    const perPlayerAtring = document.getElementById('expenses').innerText;
+    if (document.getElementById('coach').value == '' || document.getElementById('manager').value == '') {
+        alert('please enter you Amount')
+    }
+    else {
+        const perPlayerAtring = document.getElementById('expenses').innerText;
 
-    const perPlayerAmount = parseFloat(perPlayerAtring)
-    const managerAmount = inputValue('manager');
-    const coachAmount = inputValue('coach');
+        const perPlayerAmount = parseFloat(perPlayerAtring)
+        const managerAmount = inputValue('manager');
+        const coachAmount = inputValue('coach');
 
-    const totalAmount = managerAmount + coachAmount + perPlayerAmount;
+        const totalAmount = managerAmount + coachAmount + perPlayerAmount;
 
-    document.getElementById('total-Amount').innerText = totalAmount;
+        document.getElementById('total-Amount').innerText = totalAmount;
+    }
 
 
 })
