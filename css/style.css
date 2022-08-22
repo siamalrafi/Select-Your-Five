@@ -5,16 +5,26 @@
 
 .header-section {
     height: 350px;
-    background-color: #ffcaca;
+    background-color: #d8865c;
     display: flex;
     align-items: center;
     color: #800080;
+}
+.colorstyle{
+    font-family: 'Raleway Dots', cursive;
 }
  
 .btn-class {
     border-radius:8px;
     padding: 5px 25px;color: white;
 } 
+.centererer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
 
 
 li{
